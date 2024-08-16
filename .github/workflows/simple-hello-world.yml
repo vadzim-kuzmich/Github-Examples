@@ -2,7 +2,7 @@ name: Just a static Hello World!!!
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/2 * * * *'
 
 jobs:
   hello_world:
