@@ -10,4 +10,4 @@ jobs:
     steps:
     - name: The only single step
       id: first-step
-      run: echo "Hello GitHub Actions World!!!"
+      run: echo "Hello GitHub Actions World!!! Congrats $USER !!!"
