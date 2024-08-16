@@ -1,8 +1,8 @@
 name: Just a static Hello World!!!
 
-on:
-  schedule:
-    - cron: '*/2 * * * *'
+on: [push]
+  # schedule:
+    # - cron: '*/2 * * * *'
 
 jobs:
   hello_world:
