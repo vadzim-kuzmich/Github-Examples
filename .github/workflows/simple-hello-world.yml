@@ -1,5 +1,9 @@
 name: Just a static Hello World!!!
 
+on:
+  schedule:
+    cron: * * * * *
+
 jobs:
   hello_world:
     runs-on: ubuntu-latest
