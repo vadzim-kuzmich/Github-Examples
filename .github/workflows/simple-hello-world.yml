@@ -4,6 +4,6 @@ jobs:
   hello_world:
     runs-on: ubuntu-latest
     steps:
+    - name: The only single step
       id: first-step
-      name: The only single step
       run: echo "Hello GitHub Actions World!!!"
