@@ -1,0 +1,9 @@
+name: Just a static Hello World!!!
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      id: first-step
+      name: The only single step
+      run: echo "Hello GitHub Actions World!!!"
