@@ -40,5 +40,5 @@ jobs:
         run: printenv | grep github
       - id: print-github-user
         name: Prints the current GitHub user
-        run: echo "The current user is $GITHUB_USER"
+        run: echo "The current user is $GITHUB_ACTOR"
 
