@@ -15,7 +15,7 @@ jobs:
     steps:
       - id: preparation
         name: Preparation
-        run: echo "Preparation for the greeting."
+        run: echo "Preparing for the greeting."
       - id: greeting
         name: Greeting
         run: echo "Hello $USER!"
