@@ -1,0 +1,22 @@
+name: Hello World on Events Workflow
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  create
+  delete
+
+job:
+  runs-on: ubuntu-latest
+  steps:
+    - id: preparation
+      name: Preparation
+      run: echo "Preparation for the greeting."
+    - id: greeting
+      name: Greeting
+      run: echo "Hello $USER!"
+    - id: completion
+      name: Completion
+      run: echo "Have a nice day!"

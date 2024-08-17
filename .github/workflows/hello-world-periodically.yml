@@ -1,4 +1,4 @@
-name: Hello World Workflow
+name: Hello World Periodically Workflow
 
 on:
   schedule:
