@@ -1,12 +1,12 @@
 name: Hello World on Events Workflow
 
 on:
+  create:
+  delete:
   push:
     branches:
       - master
       - main
-  create
-  delete
 
 job:
   runs-on: ubuntu-latest
