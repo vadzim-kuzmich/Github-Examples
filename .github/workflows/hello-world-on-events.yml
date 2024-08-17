@@ -9,14 +9,16 @@ on:
       - main
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - id: preparation
-      name: Preparation
-      run: echo "Preparation for the greeting."
-    - id: greeting
-      name: Greeting
-      run: echo "Hello $USER!"
-    - id: completion
-      name: Completion
-      run: echo "Have a nice day!"
+
+  hello-world
+    runs-on: ubuntu-latest
+    steps:
+      - id: preparation
+        name: Preparation
+        run: echo "Preparation for the greeting."
+      - id: greeting
+        name: Greeting
+        run: echo "Hello $USER!"
+      - id: completion
+        name: Completion
+        run: echo "Have a nice day!"
