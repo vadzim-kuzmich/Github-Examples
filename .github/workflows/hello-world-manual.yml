@@ -24,8 +24,8 @@ jobs:
         run: echo "Preparing for the greeting."
       - id: greeting
         name: Greeting
-        run: echo "{inputs.greeting} {inputs.name}!"
+        run: echo "${{inputs.greeting}} ${{inputs.name}}!"
       - id: completion
         name: Completion
-        run: echo "{inputs.completion}"
+        run: echo "${{inputs.completion}}"
 
