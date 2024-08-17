@@ -33,6 +33,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: print-all-variables
-        name: Print All environment variables
+        name: Prints All environment variables
         run: printenv
+      - id: print-github-variables
+        name: Prints GitHub variables
+        run: printenv | grep github
+      - id: print-github-user
+        name: Prints the current GitHub user
+        run: echo "The current user is $GITHUB_USER"
 
