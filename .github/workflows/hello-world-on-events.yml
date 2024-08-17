@@ -10,7 +10,7 @@ on:
 
 jobs:
 
-  hello-world
+  hello-world:
     runs-on: ubuntu-latest
     steps:
       - id: preparation
