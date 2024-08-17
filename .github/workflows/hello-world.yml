@@ -10,10 +10,10 @@ jobs:
     steps:
       - id: preparation
         name: Preparation
-        run: echo "Today is {date}. Praparing for the greeting."
+        run: echo "Today is $DATE. Praparing for the greeting."
       - id: greeting
         name: Greeting
-        run: echo "Hello {user}!"
+        run: echo "Hello $USER!"
       - id: completion
         name: Completion
         run: echo "Have a nice day!"
