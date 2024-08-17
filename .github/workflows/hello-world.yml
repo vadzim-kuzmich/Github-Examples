@@ -1,0 +1,19 @@
+name: Hello World Workflow
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - id: preparation
+        name: Preparation
+        run: echo "Today is {date}. Praparing for the greeting."
+      - id: greeting
+        name: Greeting
+        run: echo "Hello {user}!"
+      - id: completion
+        name: Completion
+        run: echo "Have a nice day!"
