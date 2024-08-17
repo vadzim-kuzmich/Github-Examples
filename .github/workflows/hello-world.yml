@@ -3,6 +3,7 @@ name: Hello World Workflow
 on:
   schedule:
     - cron: '*/1 * * * *'
+  push
 
 jobs:
   hello-world:
