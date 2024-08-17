@@ -8,7 +8,7 @@ on:
       - master
       - main
 
-job:
+jobs:
   runs-on: ubuntu-latest
   steps:
     - id: preparation
