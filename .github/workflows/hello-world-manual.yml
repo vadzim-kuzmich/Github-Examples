@@ -29,3 +29,10 @@ jobs:
         name: Completion
         run: echo "${{inputs.completion}}"
 
+  print-github-variables:
+    runs-on: ubuntu-latest
+    steps:
+      - id: print-all-variables
+        name: Print All environment variables
+        run: printenv
+
