@@ -1,0 +1,19 @@
+name: Visualising Contexts Workflow
+
+on:
+  workflow_dispatch:
+
+env:
+  TEST_ENV_W = "just a test in workflow"
+
+jobs:
+
+  show-contexts:
+    runs-on: ubuntu-latest
+    env:
+      TEST_ENV_J = "just a test in job"
+    steps:
+      - id: showing-workflow-context
+        name: Showing Workflow Context
+        run: |
+          echo ${{ github }}
