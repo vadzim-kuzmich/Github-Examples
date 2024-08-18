@@ -17,10 +17,12 @@ jobs:
         name: Showing Workflow Context
         run: |
           echo ${{ github }}
+          echo $GITHUB_CONTEXT
       - id: showing-job-context
         name: Showing Job Context
         run: |
           echo ${{ job }}
+          echo $JOB_CONTEXT
       - id: showing-steps-context
         name: Showing Steps Context
         run: |
