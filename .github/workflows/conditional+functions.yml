@@ -1,0 +1,30 @@
+name: Conditions + Functions Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: Just a name
+        type: string
+        required: false
+      fullload:
+        description: Defines if all steps of the jobs should be run.
+        type: boolean
+        required: true
+
+jobs:
+
+  print-inputs:
+    if: inputs.fullload
+    runs-on: ubuntu-latest
+    steps:
+      - id: printing-name
+        name: Printing name
+        run: echo "${{inputs.name}}"
+      - id: checking-name
+        name: Checking name
+        if: ${{startsWith(inputs.name, 'V')}}
+        run: echo "The name is a valid ''V' name"
+      - id: completion
+        name: Completion
+        run: echo ${{success}}
