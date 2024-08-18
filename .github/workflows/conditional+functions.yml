@@ -33,7 +33,9 @@ jobs:
   print-functions:
     runs-on: ubuntu-latest
     steps:
-      - id: concatenation
-        name: Concatenation
-        # run: echo ${{join(printenv, ',')}}
+      - id: inputs-concatenation
+        name: Inputs Concatenation
         run: echo ${{join(inputs.*, ',')}}
+      - id: github-concatenation
+        name: GitHub Concatenation
+        run: echo ${{join(github.*, ',')}}
