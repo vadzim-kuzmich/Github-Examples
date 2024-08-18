@@ -27,4 +27,4 @@ jobs:
         run: echo "The name is a valid ''V' name"
       - id: completion
         name: Completion
-        run: echo ${{success}}
+        run: echo ${{success()}}
