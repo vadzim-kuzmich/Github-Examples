@@ -27,26 +27,34 @@ jobs:
           JOB_CONTEXT_JSON: ${{ toJson(job) }}
         run: |
           echo "$JOB_CONTEXT_JSON"
-          echo "Run Attempts via context: ${{ job.services }}"
-          echo "Run Attempts via env: $SERVICES"
-
-      # - id: showing-steps-context
-      #   name: Showing Steps Context
-      #   run: |
-      #     echo ${{ steps }}
-      # - id: showing-runner-context
-      #   name: Showing Runner Context
-      #   run: |
-      #     echo ${{ runner }}
-      # - id: showing-env-context
-      #   name: Showing Env Context
-      #   run: |
-      #     echo ${{ env }}
-      # - id: showing-vars-context
-      #   name: Showing Vars Context
-      #   run: |
-      #     echo ${{ vars }}
-      # - id: showing-secrets-context
-      #   name: Showing Secrets Context
-      #   run: |
-      #     echo ${{ secrets }}
+          echo "Run Services via context: ${{ job.services }}"
+      - id: showing-steps-context
+        name: Showing Steps Context
+        env:
+          STEPS_CONTEXT_JSON: ${{ toJson(steps) }}
+        run: |
+          echo "$STEPS_CONTEXT_JSON"
+      - id: showing-runner-context
+        name: Showing Runner Context
+        env:
+          RUNNER_CONTEXT_JSON: ${{ toJson(runner) }}
+        run: |
+          echo "$RUNNER_CONTEXT_JSON"
+      - id: showing-env-context
+        name: Showing Env Context
+        env:
+          ENV_CONTEXT_JSON: ${{ toJson(env) }}
+        run: |
+          echo "$ENV_CONTEXT_JSON"
+      - id: showing-vars-context
+        name: Showing Vars Context
+        env:
+          VARS_CONTEXT_JSON: ${{ toJson(vars) }}
+        run: |
+          echo "$VARS_CONTEXT_JSON"
+      - id: showing-secrets-context
+        name: Showing Secrets Context
+        env:
+          SECRETS_CONTEXT_JSON: ${{ toJson(secrets) }}
+        run: |
+          echo "$SECRETS_CONTEXT_JSON"
