@@ -21,11 +21,15 @@ jobs:
           echo "$GITHUB_CONTEXT_JSON"
           echo "Run Attempts via context: ${{ github.run_attempt }}"
           echo "Run Attempts via env: $RUN_ATTEMPT"
-      # - id: showing-job-context
-      #   name: Showing Job Context
-      #   run: |
-      #     echo ${{ job }}
-      #     echo $JOB_CONTEXT
+      - id: showing-job-context
+        name: Showing Job Context
+        env:
+          JOB_CONTEXT_JSON: ${{ toJson(job) }}
+        run: |
+          echo "$JOB_CONTEXT_JSON"
+          echo "Run Attempts via context: ${{ job.services }}"
+          echo "Run Attempts via env: $SERVICES"
+
       # - id: showing-steps-context
       #   name: Showing Steps Context
       #   run: |
