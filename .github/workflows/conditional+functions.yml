@@ -35,4 +35,4 @@ jobs:
     steps:
       - id: concatenation
         name: Concatenation
-        run: echo ${{join(['abc', 'efj'], ',')}}
+        run: echo ${{GITHUB*URL, ',')}}
