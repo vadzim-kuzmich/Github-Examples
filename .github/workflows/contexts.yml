@@ -49,6 +49,7 @@ jobs:
           echo "$ENV_CONTEXT_JSON"
           echo "TEST_ENV_W: $TEST_ENV_W"
           echo "ENV_XXX: $ENV_XXX"
+          echo "RUNNER_CONTEXT_JSON: $RUNNER_CONTEXT_JSON"
       - id: showing-vars-context
         name: Showing Vars Context
         env:
