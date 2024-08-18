@@ -17,3 +17,27 @@ jobs:
         name: Showing Workflow Context
         run: |
           echo ${{ github }}
+      - id: showing-job-context
+        name: Showing Job Context
+        run: |
+          echo ${{ job }}
+      - id: showing-jobs-context
+        name: Showing Jobs Context
+        run: |
+          echo ${{ jobs }}
+      - id: showing-steps-context
+        name: Showing Steps Context
+        run: |
+          echo ${{ steps }}
+      - id: showing-runner-context
+        name: Showing Runner Context
+        run: |
+          echo ${{ runner }}
+      - id: showing-env-context
+        name: Showing Env Context
+        run: |
+          echo ${{ env }}
+      - id: showing-var-context
+        name: Showing Var Context
+        run: |
+          echo ${{ var }}
