@@ -36,4 +36,4 @@ jobs:
       - id: concatenation
         name: Concatenation
         # run: echo ${{join(printenv, ',')}}
-        run: echo ${{github.*}}
+        run: echo ${{inputs.*}}
