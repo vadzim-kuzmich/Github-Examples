@@ -21,10 +21,6 @@ jobs:
         name: Showing Job Context
         run: |
           echo ${{ job }}
-      - id: showing-jobs-context
-        name: Showing Jobs Context
-        run: |
-          echo ${{ jobs }}
       - id: showing-steps-context
         name: Showing Steps Context
         run: |
@@ -37,7 +33,11 @@ jobs:
         name: Showing Env Context
         run: |
           echo ${{ env }}
-      - id: showing-var-context
-        name: Showing Var Context
+      - id: showing-vars-context
+        name: Showing Vars Context
         run: |
-          echo ${{ var }}
+          echo ${{ vars }}
+      - id: showing-secrets-context
+        name: Showing Secrets Context
+        run: |
+          echo ${{ secrets }}
