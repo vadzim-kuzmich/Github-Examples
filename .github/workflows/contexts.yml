@@ -19,6 +19,8 @@ jobs:
           GITHUB_CONTEXT_JSON: ${{ toJson(github) }}
         run: |
           echo "$GITHUB_CONTEXT_JSON"
+          echo "Run Attempts via context: ${{ github.run_attempt }}"
+          echo "Run Attempts via env: $RUN_ATTEMPT"
       # - id: showing-job-context
       #   name: Showing Job Context
       #   run: |
