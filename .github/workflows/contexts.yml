@@ -15,31 +15,34 @@ jobs:
     steps:
       - id: showing-workflow-context
         name: Showing Workflow Context
+        env:
+          GITHUB_CONTEXT_JSON: ${{ toJson(github) }}
         run: |
-          echo ${{ github }}
-          echo $GITHUB_CONTEXT
-      - id: showing-job-context
-        name: Showing Job Context
-        run: |
-          echo ${{ job }}
-          echo $JOB_CONTEXT
-      - id: showing-steps-context
-        name: Showing Steps Context
-        run: |
-          echo ${{ steps }}
-      - id: showing-runner-context
-        name: Showing Runner Context
-        run: |
-          echo ${{ runner }}
-      - id: showing-env-context
-        name: Showing Env Context
-        run: |
-          echo ${{ env }}
-      - id: showing-vars-context
-        name: Showing Vars Context
-        run: |
-          echo ${{ vars }}
-      - id: showing-secrets-context
-        name: Showing Secrets Context
-        run: |
-          echo ${{ secrets }}
+          echo "${{ github }}"
+          echo "$GITHUB_CONTEXT"
+          echo "$GITHUB_CONTEXT_JSON"
+      # - id: showing-job-context
+      #   name: Showing Job Context
+      #   run: |
+      #     echo ${{ job }}
+      #     echo $JOB_CONTEXT
+      # - id: showing-steps-context
+      #   name: Showing Steps Context
+      #   run: |
+      #     echo ${{ steps }}
+      # - id: showing-runner-context
+      #   name: Showing Runner Context
+      #   run: |
+      #     echo ${{ runner }}
+      # - id: showing-env-context
+      #   name: Showing Env Context
+      #   run: |
+      #     echo ${{ env }}
+      # - id: showing-vars-context
+      #   name: Showing Vars Context
+      #   run: |
+      #     echo ${{ vars }}
+      # - id: showing-secrets-context
+      #   name: Showing Secrets Context
+      #   run: |
+      #     echo ${{ secrets }}
