@@ -47,7 +47,8 @@ jobs:
           ENV_CONTEXT_JSON: ${{ toJson(env) }}
         run: |
           echo "$ENV_CONTEXT_JSON"
-          echo "$TEST_ENV_W"
+          echo "TEST_ENV_W: $TEST_ENV_W"
+          echo "ENV_XXX: $ENV_XXX"
       - id: showing-vars-context
         name: Showing Vars Context
         env:
